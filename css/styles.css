@@ -21,15 +21,19 @@ img {display: block;}
     margin-left: 0;
     margin-right: 0;
     flex-direction: column;
-    padding: 0 15px;/**/
 }
+
+.head {
+    width: 1440px;
+    margin: 0 auto;
+} /*!!*/
 
 .head .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 1158px;/**/
-    margin: 0 auto;/**/
+    width: 1158px;
+    margin: 0 156px;
 }
 
 .logo {
@@ -40,7 +44,7 @@ img {display: block;}
     font-size: 18px;
     line-height: 1.17;
     letter-spacing: 0.03em;    
-    margin-right: 76px;/**/
+    margin-right: 76px;
 }
 
 .head, .header-nav, .nav-list, .contact-list, .contacts {
@@ -51,14 +55,12 @@ img {display: block;}
     align-items: center;
 }
 
-.nav-list {
-    margin-left: 76px;
-    gap: 40px;
+.header-nav {
+    flex-grow: 1;
 }
-.contact-list { 
-    gap: 40px; 
-    position: absolute;
-    right: 156px;
+
+.nav-list, .contact-list {
+    gap: 40px;
 }
 
 .head {
@@ -76,15 +78,25 @@ img {display: block;}
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2E2F42;
-    padding: 24px 0
+    padding: 0 0 24px 0;
+    transition-property: color;
 }
 
-.nav-link:hover, .nav-link:focus, .contact-link:hover, .contact-link:focus { 
-    color: #404BBF; }
+.current {
+    color: #404BBF;
+}
+
+.current::after {    
+    content: "Studio";
+    text-decoration: underline;
+    width: 48px;
+    height: 4px;
+    margin-top: 24px;
+    color: #404BBF;
+}
 
 .contacts { 
     font-style: normal; 
-    margin-right: 156px;
 }
 
 .contact-link {
@@ -92,15 +104,26 @@ img {display: block;}
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    transition-property: color;
+}
+
+.nav-link:hover, .nav-link:focus, .contact-link:hover, .contact-link:focus { 
+    color: #404BBF;
 }
 
 .section-main { 
     background: #2E2F42;
+    width: 1440px;
     height: 600px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 188px 0;
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1.png);
+    background-size: 100%, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
 }
 .section-main .container {
     display: flex;
@@ -131,10 +154,11 @@ img {display: block;}
     letter-spacing: 0.04em;
     text-align: center;
     border: none;
+    transition-property: background-color;
 }
 
 .btn:hover, .btn:focus {
-    background: #404BBF;
+    background-color: #404BBF;
 }
 
 .section-title {
@@ -149,7 +173,7 @@ img {display: block;}
 }
 
 .section-advantages {
-    height: 344px;
+    /* height: 344px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -198,7 +222,7 @@ p {
 
 .section-team {
     background: #F4F4FD;
-    height: 732px;
+    /* height: 732px; */
     padding: 120px 0;
 }
 
@@ -208,20 +232,22 @@ p {
 
 .team-list {
     display: flex;
+    width: 1128px;
     gap: 24px;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .team-item {
     background-color: white;
     width: calc((100% - 72px) / 4);/**/
     border-radius: 0px 0px 4px 4px;
-    height: 380px;    
+    height: 428px;    
 }
 
 .team-item .section-subtitle {
     text-align: center;
-    margin-top: 32px;
     margin-bottom: 8px;
 }
 
@@ -235,6 +261,13 @@ p {
 
 .team-text {
     text-align: center;
+    margin-bottom: 8px;
+}
+
+.socials-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .section-portfolio {
@@ -243,11 +276,13 @@ p {
 }
 
 .portfolio-list {
+    width: 1128px;
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
-    margin-left: 156px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .portfolio-item {
