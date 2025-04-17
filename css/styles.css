@@ -329,9 +329,8 @@ p {
 
 .socials-link-logo {
     fill: #f4f4fd;
-    /* width: 16px;
-    height: 16px; */
-    /* margin: 12px; */
+    width: 16px;
+    height: 16px;
 }
 
 .socials-link {
@@ -415,10 +414,10 @@ p {
     margin-top: 0;
     font-weight: 500;
 }
-/* 
+
 .socials-link-logo.foot {
     width: 24px;
     height: 24px;
-    margin: 8px;
-} */
+    /* margin: 8px; */
+}
 
