@@ -329,8 +329,8 @@ p {
 
 .socials-link-logo {
     fill: #f4f4fd;
-    width: 16px;
-    height: 16px;
+    /* width: 16px;
+    height: 16px; */
     /* margin: 12px; */
 }
 
@@ -346,10 +346,6 @@ p {
 
 .socials-link:hover .socials-link:focus {
     background-color: #404bbf;
-}
-
-.icon {
-    margin: 8px;
 }
 
 .section-portfolio {
