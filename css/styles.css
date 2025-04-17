@@ -274,7 +274,7 @@ p {
     object-fit: contain;
 }
 .team-cont {
-    padding: 96px 0 32px 0;/**/
+    padding: 64px 0 32px 0;/**/
     position: relative;
     overflow: hidden;
 }
@@ -293,7 +293,12 @@ p {
     transform: translatey(0);  
 }
 
-.team-cont .socials-logo {
+.socials-logo {
+    display: flex;
+    gap: 16px;
+}
+
+.team-item .socials-logo {
     justify-content: center;
     gap: 24px;
 }
@@ -322,6 +327,13 @@ p {
     height: 40px;
 }
 
+.socials-link-logo {
+    fill: #f4f4fd;
+    width: 16px;
+    height: 16px;
+    /* margin: 12px; */
+}
+
 .socials-link {
     width: 100%;
     height: 100%;
@@ -336,8 +348,8 @@ p {
     background-color: #404bbf;
 }
 
-.socials-link-logo {
-    fill: #f4f4fd;
+.icon {
+    margin: 8px;
 }
 
 .section-portfolio {
@@ -408,7 +420,9 @@ p {
     font-weight: 500;
 }
 
-.socials-logo {
-    display: flex;
-    gap: 16px;
+.socials-link-logo.foot {
+    width: 24px;
+    height: 24px;
+    margin: 8px;
 }
+
